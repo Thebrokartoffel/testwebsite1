@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Testseite</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f5f2;
+  --ink: #1a1a1a;
+  --muted: #555;
+  --accent: #2a5bd7;
+  --on-accent: #fff;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #141414;
+    --ink: #f0f0ee;
+    --muted: #a8a8a4;
+    --accent: #6d94ff;
+    --on-accent: #0b0b0b;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #141414;
+  --ink: #f0f0ee;
+  --muted: #a8a8a4;
+  --accent: #6d94ff;
+  --on-accent: #0b0b0b;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+h1 { font-size: clamp(2.4rem, 12vw, 4rem); margin: 0 0 .5rem; }
+p { margin: 0 0 1.6rem; color: var(--muted); font-size: 1.15rem; }
+a.btn {
+  display: inline-block;
+  min-height: 44px;
+  padding: .8rem 1.4rem;
+  border-radius: .6rem;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+a.btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Hallo</h1>
+  <p>Das ist eine Testwebsite.</p>
+  <a class="btn" href="https://www.google.com" target="_blank" rel="noopener noreferrer">Zu Google</a>
+</main>
+</body>
+</html>
